@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrasi Lelang</title>
+
+  <style>
+    /* Font dari Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    /* Styling dasar untuk body */
+    body {
+      background-color: #f5f5f5; /* Latar belakang abu-abu lembut */
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Container utama di tengah */
+    .container {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 400px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      margin-bottom: 5px;
+      color: #666;
+      font-weight: 600;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #000;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      width: 100%;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #333;
+    }
+
+    /* Styling untuk footer */
+    footer {
+      margin-top: 20px;
+      color: #999;
+      font-size: 14px;
+    }
+  </style>
+
+  <script>
+    function sendMessage() {
+      const name = document.getElementById('name').value;
+      const address = document.getElementById('address').value;
+      const tiktok = document.getElementById('tiktok').value;
+      const phone = document.getElementById('phone').value;
+
+      const whatsappNumber = '6283804873547'; // Ganti dengan nomor WhatsApp bisnis Anda
+      const message = `Nama: ${name}%0aAlamat: ${address}%0aUsername TikTok: ${tiktok}%0aNomor HP: ${phone}`;
+
+      const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${message}`;
+      window.open(whatsappUrl, '_blank');
+    }
+  </script>
+
+</head>
+<body>
+
+  <div class="container">
+    <h1>Registrasi Lelang</h1>
+
+    <form onsubmit="event.preventDefault(); sendMessage();">
+      <label for="name">Nama:</label>
+      <input type="text" id="name" placeholder="Masukkan nama Anda" required>
+
+      <label for="address">Alamat Lengkap:</label>
+      <input type="text" id="address" placeholder="Masukkan alamat lengkap" required>
+
+      <label for="tiktok">Username TikTok:</label>
+      <input type="text" id="tiktok" placeholder="Masukkan username TikTok" required>
+
+      <label for="phone">Nomor HP:</label>
+      <input type="text" id="phone" placeholder="Masukkan nomor HP" required>
+
+      <button type="submit">Kirim via WhatsApp</button>
+    </form>
+
+    <footer>
+      &copy; 2024 Lelang Diecast. All rights reserved.
+    </footer>
+  </div>
+
+</body>
+</html>
