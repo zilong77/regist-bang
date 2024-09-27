@@ -31,15 +31,15 @@
 
     h1 {
       color: #333;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       font-size: 24px;
     }
 
     /* Styling untuk gambar logo */
     .logo {
-     max-width: 200px; /* Memperbesar logo */
-     width: 100%;      /* Pastikan logo responsif */
-     margin-bottom: 10px; /* Kurangi jarak antara logo dan judul */
+      max-width: 200px; /* Memperbesar logo */
+      width: 100%;      /* Pastikan logo responsif */
+      margin-bottom: 10px; /* Kurangi jarak antara logo dan judul */
     }
 
     label {
@@ -80,6 +80,35 @@
       color: #999;
       font-size: 14px;
     }
+
+    /* Styling untuk ikon dan tautan sosial */
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .social-icons a {
+      display: inline-block;
+    }
+
+    .social-icons img {
+      width: 30px; /* Ukuran logo Instagram */
+      height: 30px;
+    }
+
+    .whatsapp-link {
+      display: block;
+      margin-top: 15px;
+      text-decoration: none;
+      color: #25D366;
+      font-weight: 600;
+    }
+
+    .whatsapp-link:hover {
+      color: #128C7E;
+    }
   </style>
 
   <script>
@@ -108,19 +137,32 @@
 
     <form onsubmit="event.preventDefault(); sendMessage();">
       <label for="name">Nama:</label>
-      <input type="text" id="name" placeholder="Masukkan nama anda" required>
+      <input type="text" id="name" placeholder="Masukkan Nama Anda" required>
 
       <label for="address">Alamat Lengkap:</label>
-      <input type="text" id="address" placeholder="Masukkan alamat lengkap" required>
+      <input type="text" id="address" placeholder="Masukkan Alamat Lengkap" required>
 
       <label for="tiktok">Username TikTok:</label>
-      <input type="text" id="tiktok" placeholder="Masukkan username TikTok" required>
+      <input type="text" id="tiktok" placeholder="Masukkan Username TikTok" required>
 
       <label for="phone">Nomor HP:</label>
-      <input type="text" id="phone" placeholder="Masukkan nomor HP" required>
+      <input type="text" id="phone" placeholder="Masukkan Nomor HP" required>
 
       <button type="submit">Kirim via WhatsApp</button>
     </form>
+
+    <!-- Ikon Sosial Media dan Grup WhatsApp -->
+    <div class="social-icons">
+      <!-- Logo Instagram -->
+      <a href="https://www.instagram.com/p8.wheels/" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+      </a>
+    </div>
+
+    <!-- Tautan Grup WhatsApp -->
+    <a href="https://chat.whatsapp.com/I4jHvcjiofGFFFU4hHoh7J" class="whatsapp-link" target="_blank">
+      Join Grup WhatsApp P8 Wheels
+    </a>
 
     <footer>
       &copy; 2024 P8 Wheels X 165CLXV
