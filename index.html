@@ -84,53 +84,28 @@
     /* Styling untuk ikon dan tautan sosial */
     .social-section {
       display: flex;
-      flex-direction: column;
+      justify-content: space-between; /* Tempatkan elemen di kiri dan kanan */
       align-items: center;
       margin-top: 20px;
     }
 
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 10px;
+    .social-section .social-item {
+      text-align: center;
+      width: 48%; /* Lebar masing-masing item 48% agar pas dua di satu baris */
     }
 
-    .social-icons a {
-      display: inline-block;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .social-icons img {
+    .social-section .social-item img {
       width: 30px; /* Ukuran logo */
       height: 30px;
     }
 
-    .social-text {
+    .social-section .social-item .social-text {
       font-size: 16px;
       color: #333;
       font-weight: 600;
+      margin-top: 5px;
     }
 
-    .whatsapp-link {
-      text-decoration: none;
-      color: #25D366;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 10px;
-    }
-
-    .whatsapp-link img {
-      width: 30px;
-      height: 30px;
-    }
-
-    .whatsapp-link:hover {
-      color: #128C7E;
-    }
   </style>
 
   <script>
@@ -173,21 +148,23 @@
       <button type="submit">Kirim via WhatsApp</button>
     </form>
 
-    <!-- Seksi Ikon Sosial Media -->
+    <!-- Seksi Ikon Sosial Media dalam satu baris -->
     <div class="social-section">
-      <!-- Teks dan Logo Instagram -->
-      <p class="social-text">Follow IG P8.Wheels</p>
-      <div class="social-icons">
+      <!-- Follow Instagram -->
+      <div class="social-item">
+        <p class="social-text">Follow IG P8.Wheels</p>
         <a href="https://www.instagram.com/p8.wheels/" target="_blank">
           <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
         </a>
       </div>
 
-      <!-- Teks dan Tautan Grup WhatsApp -->
-      <a href="https://chat.whatsapp.com/I4jHvcjiofGFFFU4hHoh7J" class="whatsapp-link" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-        Join Grup P8.Wheels
-      </a>
+      <!-- Join Grup WhatsApp -->
+      <div class="social-item">
+        <p class="social-text">Join Grup P8.Wheels</p>
+        <a href="https://chat.whatsapp.com/I4jHvcjiofGFFFU4hHoh7J" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </a>
+      </div>
     </div>
 
     <footer>
