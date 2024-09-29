@@ -17,6 +17,7 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
+      flex-direction: column;
     }
 
     /* Container utama */
@@ -27,6 +28,7 @@
       width: 400px;
       padding: 20px;
       text-align: center;
+      margin-bottom: 20px;
     }
 
     h1 {
@@ -50,7 +52,7 @@
       font-weight: 600;
     }
 
-    input {
+    input[type="text"] {
       width: 100%;
       padding: 10px;
       margin-bottom: 15px;
@@ -58,6 +60,19 @@
       border-radius: 4px;
       font-size: 16px;
       box-sizing: border-box;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      color: #666;
+      text-align: left;
+      margin-bottom: 15px;
     }
 
     button {
@@ -106,6 +121,31 @@
       margin-top: 5px;
     }
 
+    /* Styling untuk bagian Wall of BNR */
+    .wall-bnr {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+      margin-bottom: 10px; /* Letakkan di atas footer */
+    }
+
+    .wall-bnr img {
+      width: 40px; /* Ukuran tengkorak */
+      margin-right: 10px;
+    }
+
+    .wall-bnr a {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .wall-bnr a:hover {
+      color: #000;
+    }
+
   </style>
 
   <script>
@@ -114,6 +154,12 @@
       const address = document.getElementById('address').value;
       const tiktok = document.getElementById('tiktok').value;
       const phone = document.getElementById('phone').value;
+      const consent = document.getElementById('consent').checked;
+
+      if (!consent) {
+        alert("Anda harus menyetujui syarat dan ketentuan untuk melanjutkan.");
+        return;
+      }
 
       const whatsappNumber = '6283804873547'; 
       const message = `Nama: ${name}%0aAlamat: ${address}%0aUsername TikTok: ${tiktok}%0aNomor HP: ${phone}`;
@@ -137,13 +183,19 @@
       <input type="text" id="name" placeholder="Masukkan Nama Anda" required>
 
       <label for="address">Alamat Lengkap:</label>
-      <input type="text" id="address" placeholder="Masukkan Alamat Lengkap" required>
+      <input type="text" id="address" placeholder="Masukkan Alamat lengkap" required>
 
       <label for="tiktok">Username TikTok:</label>
       <input type="text" id="tiktok" placeholder="Masukkan Username TikTok" required>
 
       <label for="phone">Nomor HP:</label>
       <input type="text" id="phone" placeholder="Masukkan Nomor HP" required>
+
+      <!-- Checkbox untuk persetujuan -->
+      <div class="checkbox-label">
+        <input type="checkbox" id="consent">
+        <label for="consent">Saya bertanggung jawab atas nominal bid saya dan tidak akan BID AND RUN</label>
+      </div>
 
       <button type="submit">Kirim via WhatsApp</button>
     </form>
@@ -167,8 +219,14 @@
       </div>
     </div>
 
+    <!-- Bagian Wall of BNR, ditempatkan di atas footer -->
+    <div class="wall-bnr">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Skull_and_crossbones.svg/1200px-Skull_and_crossbones.svg.png" alt="Tengkorak">
+      <a href="https://docs.google.com/spreadsheets/d/11m8OmuR5UX55G0SgAZTCID4pS4YinPAL4QdJUHwsvOk/edit?gid=0#gid=0" target="_blank">WALL OF BNR</a>
+    </div>
+
     <footer>
-      &copy; 2024 P8.Wheels X 165CLXV
+      &copy; 2024 P8.Wheels X 165CLXV 
     </footer>
   </div>
 
