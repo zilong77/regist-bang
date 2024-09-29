@@ -82,28 +82,50 @@
     }
 
     /* Styling untuk ikon dan tautan sosial */
+    .social-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+
     .social-icons {
       display: flex;
       justify-content: center;
       gap: 10px;
-      margin-top: 15px;
+      margin-top: 10px;
     }
 
     .social-icons a {
       display: inline-block;
+      text-decoration: none;
+      color: inherit;
     }
 
     .social-icons img {
-      width: 30px; /* Ukuran logo Instagram */
+      width: 30px; /* Ukuran logo */
       height: 30px;
     }
 
+    .social-text {
+      font-size: 16px;
+      color: #333;
+      font-weight: 600;
+    }
+
     .whatsapp-link {
-      display: block;
-      margin-top: 15px;
       text-decoration: none;
       color: #25D366;
       font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .whatsapp-link img {
+      width: 30px;
+      height: 30px;
     }
 
     .whatsapp-link:hover {
@@ -118,7 +140,7 @@
       const tiktok = document.getElementById('tiktok').value;
       const phone = document.getElementById('phone').value;
 
-      const whatsappNumber = '6283804873547'; // Ganti dengan nomor WhatsApp bisnis Anda
+      const whatsappNumber = '6283804873547'; 
       const message = `Nama: ${name}%0aAlamat: ${address}%0aUsername TikTok: ${tiktok}%0aNomor HP: ${phone}`;
 
       const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${message}`;
@@ -151,21 +173,25 @@
       <button type="submit">Kirim via WhatsApp</button>
     </form>
 
-    <!-- Ikon Sosial Media dan Grup WhatsApp -->
-    <div class="social-icons">
-      <!-- Logo Instagram -->
-      <a href="https://www.instagram.com/p8.wheels/" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+    <!-- Seksi Ikon Sosial Media -->
+    <div class="social-section">
+      <!-- Teks dan Logo Instagram -->
+      <p class="social-text">Follow IG P8.Wheels</p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/p8.wheels/" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        </a>
+      </div>
+
+      <!-- Teks dan Tautan Grup WhatsApp -->
+      <a href="https://chat.whatsapp.com/I4jHvcjiofGFFFU4hHoh7J" class="whatsapp-link" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        Join Grup P8.Wheels
       </a>
     </div>
 
-    <!-- Tautan Grup WhatsApp -->
-    <a href="https://chat.whatsapp.com/I4jHvcjiofGFFFU4hHoh7J" class="whatsapp-link" target="_blank">
-      Join Grup WhatsApp P8 Wheels
-    </a>
-
     <footer>
-      &copy; 2024 P8 Wheels X 165CLXV
+      &copy; 2024 P8.Wheels X 165CLXV
     </footer>
   </div>
 
