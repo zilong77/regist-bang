@@ -18,6 +18,7 @@
       align-items: center;
       height: 100vh;
       flex-direction: column;
+      padding: 10px; /* Tambahkan padding untuk memastikan konten tidak menempel di tepi layar di perangkat kecil */
     }
 
     /* Container utama */
@@ -25,7 +26,8 @@
       background-color: #fff;
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      width: 400px;
+      width: 100%;
+      max-width: 400px; /* Buat maksimal lebarnya 400px agar tidak melebihi lebar layar di perangkat besar */
       padding: 20px;
       text-align: center;
       margin-bottom: 20px;
@@ -39,8 +41,8 @@
 
     /* Styling untuk gambar logo */
     .logo {
-      max-width: 200px; /* Memperbesar logo */
-      width: 100%;      /* Pastikan logo responsif */
+      max-width: 150px; /* Memperbesar logo */
+      width: 100%; /* Pastikan logo responsif */
       margin-bottom: 10px; /* Kurangi jarak antara logo dan judul */
     }
 
@@ -144,6 +146,26 @@
 
     .wall-bnr a:hover {
       color: #000;
+    }
+
+    /* Media query untuk perangkat mobile */
+    @media (max-width: 600px) {
+      .container {
+        padding: 15px;
+        width: 90%;
+      }
+
+      .logo {
+        max-width: 120px; /* Ukuran logo lebih kecil untuk perangkat kecil */
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      .wall-bnr img {
+        width: 30px; /* Ukuran tengkorak lebih kecil untuk perangkat mobile */
+      }
     }
 
   </style>
